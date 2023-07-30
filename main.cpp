@@ -13,10 +13,9 @@ int main() {
         system("PAUSE");
     }
     else {
+        WaitForSingleObject(process_info.hProcess, INFINITE);
         CloseHandle(process_info.hProcess);
         CloseHandle(process_info.hThread);
-        std::cout << "Execute Succeed\n";
     }
     return 0;
 }
-
